@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .flex {
+            display: flex;
+        }
+        .flex.center {
+            justify-content: center;
+        }
+        .flex.middle {
+            align-items: center;
+        }
+    </style>
+    <title>Hello, world!</title>
+</head>
+<body class="bg-gray-100">
+    <div>
+        <div class="container h-screen flex center middle">
+            
+            <div class="w-full">
+                
+                <h1 class="text-4xl mb-6">Train Compositions</h1>
+                <div class="card w-full mb-4">
+                    <div class="card-body p-0">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Train Number</th>
+                                    <th scope="col">Start</th>
+                                    <th scope="col">Destination</th>
+                                    <th scope="col">From Date</th>
+                                    <th scope="col">To Date</th>
+                                    <th scope="col">Selected Weekdays</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">ICL 369</th>
+                                    <td>Kk</td>
+                                    <td>Fr</td>
+                                    <td>2019-10-01</td>
+                                    <td>2019-12-31</td>
+                                    <td>--WT-SaSu</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">ICL 369</th>
+                                    <td>Kk</td>
+                                    <td>Fr</td>
+                                    <td>2019-10-01</td>
+                                    <td>2019-12-31</td>
+                                    <td>--WT-SaSu</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <button onclick="openCreate" class="btn btn-primary flex ml-auto" data-toggle="modal" data-target="#exampleModal">
+                    Add New
+                </button>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form id="create-form" method="POST" action="<--ENDPOINT-->">
+                    <div class="form-group">
+                        <label>Train Number</label>
+                        <input name="<--PROPERTY_NAME-->" type="text" class="form-control" placeholder="ICL 434">
+                      </div>        
+
+                      <div class="form-group">
+                        <label>Start</label>
+                        <input name="<--PROPERTY_NAME-->" type="text" class="form-control" placeholder="Ar">
+                      </div> 
+
+                      <div class="form-group">
+                        <label>Destination</label>
+                        <input name="<--PROPERTY_NAME-->" type="text" class="form-control" placeholder="He">
+                      </div> 
+
+                      <div class="form-group">
+                        <label>From Date</label>
+                        <input name="<--PROPERTY_NAME-->" type="text" class="form-control" placeholder=YYYY-DD-MM">
+                      </div> 
+
+                      <div class="form-group">
+                        <label>To Date</label>
+                        <input name="<--PROPERTY_NAME-->" type="text" class="form-control" placeholder=YYYY-DD-MM">
+                      </div> 
+
+                      <div class="form-group">
+                        <label>Selected Weekdays</label>
+                        <input name="<--PROPERTY_NAME-->" type="text" class="form-control" placeholder=--WT-SaSu">
+                      </div> 
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="submit" form="create-form" class="btn btn-primary">Save Entry</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
